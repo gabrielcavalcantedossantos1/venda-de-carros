@@ -7,6 +7,7 @@ interface InputProps {
   register: UseFormRegister<any>;
   error?: string;
   rules?: RegisterOptions;
+  text?: string;
 }
 
 export function Input({
@@ -16,9 +17,18 @@ export function Input({
   error,
   register,
   rules,
+  text,
 }: InputProps) {
   return (
     <div>
+      {text && (
+        <label
+          htmlFor={name}
+          className="font-bold mx-2 text-2xl inline-block transform hover:scale-105 transition-all duration-200 ease-in-out"
+        >
+          {text}
+        </label>
+      )}
       <input
         type={type}
         placeholder={placeholder}
