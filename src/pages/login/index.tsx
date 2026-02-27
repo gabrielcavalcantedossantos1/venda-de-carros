@@ -80,6 +80,11 @@ export function Login() {
             Acessar
           </button>
         </form>
+
+        <Link to="/register">
+          Ainda não possui uma conta?
+          <span className="text-blue-600 cursor-pointer"> Faça o Registro</span>
+        </Link>
       </div>
     </Container>
   );
