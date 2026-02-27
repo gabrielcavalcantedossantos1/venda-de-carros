@@ -43,16 +43,17 @@ export function Login() {
   return (
     <Container>
       <div className="w-full min-h-screen flex justify-center items-center flex-col gap-4">
-        <Link to="/" className="mb-6 max-w-sm w-full">
+        <Link to="/" className="mb-6">
           <img src={logoImg} alt="Logo do site" />
         </Link>
 
         <form
-          className="bg-white max-w-xl w-full rounded-lg"
+          className="bg-white max-w-xl w-full rounded-lg p-4"
           onSubmit={handleSubmit(onsubmit)}
         >
           <div className="mb-3">
             <Input
+              text="E-mail"
               type="email"
               placeholder="Digite o seu email"
               name="email"
@@ -63,6 +64,7 @@ export function Login() {
 
           <div className="mb-3">
             <Input
+              text="Senha"
               type="password"
               placeholder="Digite sua senha"
               name="password"
@@ -71,7 +73,12 @@ export function Login() {
             />
           </div>
 
-          <button type="submit">Acessar</button>
+          <button
+            type="submit"
+            className="bg-zinc-900 w-full rounded-md text-white h-10 font-medium cursor-pointer"
+          >
+            Acessar
+          </button>
         </form>
       </div>
     </Container>
